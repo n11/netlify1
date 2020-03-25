@@ -25,8 +25,6 @@ window.onload = async() => {
     if (isAuthenticated) {
         // show the gated content
         return;
-    } else {
-        window.history.replaceState({}, document.title, APP_PATH);
     }
 
     // NEW - check for the code and state parameters
