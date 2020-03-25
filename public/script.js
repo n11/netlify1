@@ -1,6 +1,7 @@
 'use strict';
 
 const APP_PATH = `/page2`; // https://ユーザー名.github.io/<ココ> or ルートパス利用なら`/`だけでOK
+const APP_PATH2 = `/index2`; // https://ユーザー名.github.io/<ココ> or ルートパス利用なら`/`だけでOK
 let auth0 = null;
 const fetchAuthConfig = () => fetch("auth_config.json"); // auth_config.json読み込み
 
@@ -75,6 +76,6 @@ const login = async() => {
 
 const logout = () => {
     auth0.logout({
-        returnTo: window.location.origin + APP_PATH
+        returnTo: window.location.origin + APP_PATH2
     });
 };
